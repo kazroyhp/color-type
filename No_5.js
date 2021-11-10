@@ -7,9 +7,9 @@ var ansCntDiv, txtArea;
 function setup() {
   createCanvas(720, 480);
   background(200);
-  ansCntDiv = createDiv('0').position(10,5);
+  ansCntDiv = createDiv('0').position(10,50).style('font-size','50px');
   textSize(20);
-  text("表示される二色に1番近いと感じる言葉を選択して下さい", 100, 20);
+  text("＜説明＞表示される二色に1番近いと感じる言葉を選択して下さい", 50, 20);
   text("20回選択を行い、表示されるデータをコピーし、　　から送信をお願いします", 10, 43);
   let a = createA('https://forms.gle/NhVqyEzQe6Uzv3HH6', 'ここ', self);
   a.style('font-size', '21px');
