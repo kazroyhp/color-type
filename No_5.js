@@ -5,15 +5,17 @@ var color, colol;
 var ansCntDiv, txtArea;
 
 function setup() {
-  createCanvas(720, 480);
+  createCanvas(720, 600);
   background(200);
-  ansCntDiv = createDiv('0').position(10,50).style('font-size','50px');
+  ansCntDiv = createDiv('0').position(10,80).style('font-size','70px');
   textSize(20);
-  text("＜説明＞表示される二色に1番近いと感じる言葉を選択して下さい", 50, 20);
-  text("20回選択を行い、表示されるデータをコピーし、　　から送信をお願いします", 10, 43);
-  let a = createA('https://forms.gle/NhVqyEzQe6Uzv3HH6', 'ここ', self);
+  text("表示される二色の組み合わせを見て直感的に1番近いと感じる言葉を1つ選択",10, 20);
+  text("して下さい。言葉は25個あります。また選択を一度行うと色のみ変化します。", 10, 40);
+  text("20回選択を行うと、下記に#から始まるデータが表示されます。", 10, 60);
+  text("コピーして頂き　 　　　　　　　から送信をお願いします。", 10, 80);
+  let a = createA('https://forms.gle/cLe1cgwuN6pgjpvo8', 'こちらのフォーム', self);
   a.style('font-size', '21px');
-  a.position(453, 21);
+  a.position(150, 58);
   button();
   txtArea = document.getElementById('myInnerFrame');
   noLoop();
@@ -27,9 +29,9 @@ function draw() {
   
   noStroke();
   fill(color);
-  square(125, 50, 200);
+  square(125, 150, 200);
   fill(colol);
-  square(395, 50, 200);
+  square(375, 150, 200);
 
   ansCntDiv.html(ansCount);
 }
@@ -43,7 +45,7 @@ function button() {
   for (var i = 0; i < labels.length; i ++) {
     const lbl = labels[i];
     const button = createButton(lbl);
-    button.position((i % 5) * 138 + 50, floor(i / 5) * 40 + 280);
+    button.position((i % 5) * 138 + 50, floor(i / 5) * 40 + 400);
     button.mousePressed(function () { change2(lbl); });
   }
 }
