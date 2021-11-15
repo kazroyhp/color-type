@@ -13,7 +13,7 @@ function setup() {
   text("して下さい。言葉は25個あります。また選択を一度行うと色のみ変化します。", 10, 40);
   text("20回選択を行うと、下記に#から始まるデータが表示されます。", 10, 60);
   text("コピーして頂き　 　　　　　　　から送信をお願いします。", 10, 80);
-  let a = createA('https://forms.gle/cLe1cgwuN6pgjpvo8', 'こちらのフォーム', self);
+  let a = createA('https://forms.gle/vgmD9LUadb85s1p27', 'こちらのフォーム', self);
   a.style('font-size', '21px');
   a.position(150, 58);
   button();
